@@ -1,20 +1,12 @@
 package temurbahri.kodlama.io.devs.dataAccess.abstracts;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import temurbahri.kodlama.io.devs.entities.concretes.ProgramingLanguage;
+import temurbahri.kodlama.io.devs.entities.concretes.ProgrammingLanguages;
 
-public interface ProgramingLanguageRepository {
+public interface ProgramingLanguageRepository extends JpaRepository<ProgrammingLanguages,Integer> {
 	
-	List<ProgramingLanguage> getAll();
 	
-	ProgramingLanguage getById(int id);
-	
-	void add(ProgramingLanguage language);
-
-	void delete(int id);
-
-	void update(ProgramingLanguage language);
 	
 	
 
